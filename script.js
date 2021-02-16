@@ -1,4 +1,5 @@
 let container = document.querySelector(".container");
+let addBook = document.querySelector(".addBook");
 
 
 let myLibrary = [];
@@ -53,6 +54,11 @@ function displayOnScreen() {
 	}
 }
 
+function addNewBook() {
+	
+}
+
+addBook.addEventListener("click", addNewBook);
 
 addBookToLibrary();
 displayOnScreen();

@@ -11,13 +11,14 @@ body {
 .container {
 	display: flex;
 	font-size: 20px;
+	/*justify-content: center;*/
 }
 
 .card {
 	width: 250px;
 	height: 300px;
 	margin:0 20px;
-	background: #007965;
+	background: #1e212d;
 	color: #ffcc29;
 	padding: 20px;
 }
@@ -26,3 +27,67 @@ body {
 	font-size: 22px;
 }
 
+.btn {
+	cursor: pointer;
+	background: #1e212d;
+	color: #faf3e0;
+	border: 1px solid #1e212d;
+	outline: none;
+}
+
+.btn:hover {
+	border: 1px solid #1e212d;
+	background-color: #faf3e0;
+	color: #1e212d;
+}
+
+.addBook {
+	font-size: 20px;
+	margin: 20px;
+	padding: 15px 30px;
+}
+
+.submit {
+	margin: 20px 0;
+	padding: 10px 20px;
+}
+.inputForm {
+	width: 25%;
+	margin:100px auto;
+	padding: 20px 0;
+	background: #ffcc29;
+}
+form {
+	display: flex;
+	flex-direction: column;
+	width: 85%;
+	margin: 0 auto;
+}
+input[type="text"] {
+	box-sizing: border-box;
+	padding: 15px 20px;
+	margin: 8px 0;
+	border-radius: 5px;
+	border: none;
+	outline: none;
+	background: #1e212d;
+	color: #faf3e0;
+}
+
+input[type="submit"] {
+	align-self: center;
+
+}
+
+
+.wrapper {
+	display: none;
+}
+
+body {
+	background: #1e212d;
+}
+
+.removeWrapper {
+	display: none;
+}
