@@ -1,3 +1,28 @@
-body{
-	
+
+body {
+	background: #faf3e0;
+	color: #1e212d;
 }
+.title {
+	text-align: center;
+	font-size: 30px;
+}
+
+.container {
+	display: flex;
+	font-size: 20px;
+}
+
+.card {
+	width: 250px;
+	height: 300px;
+	margin:0 20px;
+	background: #007965;
+	color: #ffcc29;
+	padding: 20px;
+}
+
+.card h2 {
+	font-size: 22px;
+}
+
