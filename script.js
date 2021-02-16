@@ -1,5 +1,7 @@
 let container = document.querySelector(".container");
 let addBook = document.querySelector(".addBook");
+let wrapper = document.querySelector(".wrapper");
+let inputForm = document.querySelector(".inputForm");
 
 
 let myLibrary = [];
@@ -55,7 +57,8 @@ function displayOnScreen() {
 }
 
 function addNewBook() {
-	
+	wrapper.classList.add("removeContent");
+	inputForm.classList.remove("removeForm");
 }
 
 addBook.addEventListener("click", addNewBook);

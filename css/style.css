@@ -10,9 +10,9 @@ body {
 
 .container {
 	display: flex;
+	padding-top: 2%;
 	font-size: 20px;
-	/*justify-content: center;*/
-}
+} 
 
 .card {
 	width: 250px;
@@ -72,22 +72,17 @@ input[type="text"] {
 	outline: none;
 	background: #1e212d;
 	color: #faf3e0;
+	font-size: 1rem;
 }
 
 input[type="submit"] {
 	align-self: center;
-
 }
 
-
-.wrapper {
+.removeForm {
 	display: none;
 }
 
-body {
-	background: #1e212d;
-}
-
-.removeWrapper {
+.removeContent {
 	display: none;
 }
