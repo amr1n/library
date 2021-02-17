@@ -23,17 +23,21 @@ let guilt = new Book("Grit", "Angela Dukworth", "200", "Yes");
 let first = new Book("Grit", "Angela Dukworth", "200", "Yes"); 
 
 function addBookToLibrary(newBook) {
-	myLibrary.push(grit);
-	myLibrary.push(guilt);
-	myLibrary.push(first);
-	myLibrary.push(newBook);
+	myLibrary.push(newBook); 
+} 
+
+addBookToLibrary(grit);
+addBookToLibrary(guilt);
+addBookToLibrary(first);
+
+function cardMaker() {
+	
 }
 
-function displayOnScreen() {
-
+function displayOnScreen() { 
 	for (i = 0; i < myLibrary.length; i++) {
 
-		let card = document.createElement("div");
+		let	card = document.createElement("div");
 		let title = document.createElement("h2");
 		let author = document.createElement("h2");
 		let pages = document.createElement("p");
@@ -46,35 +50,37 @@ function displayOnScreen() {
 		pages.textContent = `Pages: ${myLibrary[i].pages}`;
 		readingStats.textContent = `Read: ${myLibrary[i].readingStats}`;
 
-		container.appendChild(card);
 		card.appendChild(title);
 		card.appendChild(author);
 		card.appendChild(pages);
 		card.appendChild(readingStats);
+		container.appendChild(card);
 	}
 }
 
 function submitInputs() {
-	title = title.value;
-	author = author.value;
-	pages = pages.value;
-	readingStats = readingStats.value;
-
-	if (title == undefined || author == undefined || pages == undefined || readingStats == undefined) {
+	if (container != "") {
+		for (i = 0; i < myLibrary.length; i++) {
+		container.removeChild(card);
+		}
+	}
+	 
+ 	let a = title.value;
+ 	let b = author.value;
+ 	let c = pages.value;
+ 	let d = readingStats.value;
+	if (a == "" || b == "" || c == "" || d == "") {
 		return;
 	}else {
-		let newBook = new Book(title, author, pages, readingStats);
+		let newBook = new Book(a,b,c,d);
 		addBookToLibrary(newBook);
 	}
-	
-	displayOnScreen();
-	wrapper.classList.remove("removeContent");
+
 	inputForm.classList.add("removeForm");
 	body.style.backgroundColor = "#faf3e0";
 }
 
-function addNewBook() {
-	wrapper.classList.add("removeContent");
+function addNewBook() { 
 	inputForm.classList.remove("removeForm");
 	body.style.backgroundColor = "#1e212d";
 }
@@ -83,3 +89,4 @@ addBook.addEventListener("click", addNewBook);
 submitBtn.addEventListener("click", submitInputs);
 
 
+displayOnScreen();
