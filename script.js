@@ -66,6 +66,7 @@ function submitInputs() {
 		let newBook = new Book(title, author, pages, readingStats);
 		addBookToLibrary(newBook);
 	}
+	
 	displayOnScreen();
 	wrapper.classList.remove("removeContent");
 	inputForm.classList.add("removeForm");
