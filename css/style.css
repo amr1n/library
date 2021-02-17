@@ -2,10 +2,23 @@
 body {
 	background: #faf3e0;
 	color: #1e212d;
+	font-family: sans-serif;
+	box-sizing: border-box;
 }
-.title {
+
+h3 {
 	text-align: center;
-	font-size: 30px;
+	font-size: 25px;
+	margin: 10px 20px; 
+}
+
+h1 {
+	padding: 20px;
+	border-bottom: 3px solid gray; 
+}
+
+.wrapper {
+	text-align: center;
 }
 
 .container {
@@ -15,12 +28,14 @@ body {
 } 
 
 .card {
-	width: 250px;
+	width: 200px;
 	height: 300px;
 	margin:0 20px;
 	background: #1e212d;
 	color: #ffcc29;
-	padding: 20px;
+	padding: 5px;
+	padding-left: 20px;
+	text-align: left;
 }
 
 .card h2 {
@@ -31,43 +46,55 @@ body {
 	cursor: pointer;
 	background: #1e212d;
 	color: #faf3e0;
-	border: 1px solid #1e212d;
+	border: 2px solid #1e212d;
 	outline: none;
+	font-size: 16px;
 }
 
-.btn:hover {
-	border: 1px solid #1e212d;
+.btn:hover { 
 	background-color: #faf3e0;
 	color: #1e212d;
 }
 
-.addBook {
+.btnContainer {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	border-top: 2px solid gray;
+	margin-top: -20px;
+	padding-top: 15px;
+}
+
+.addBook { 
 	font-size: 20px;
-	margin: 20px;
-	padding: 15px 30px;
+	padding: 15px 30px; 
 }
 
 .submit {
-	margin: 20px 0;
-	padding: 10px 20px;
+	margin: 5% 8%;
+	padding: 15px 45px;
+
 }
+
 .inputForm {
 	width: 25%;
 	margin:100px auto;
 	padding: 20px 0;
 	background: #ffcc29;
+	text-align: center;
 }
+
 form {
 	display: flex;
 	flex-direction: column;
 	width: 85%;
 	margin: 0 auto;
 }
+
 input[type="text"] {
 	box-sizing: border-box;
 	padding: 15px 20px;
-	margin: 8px 0;
-	border-radius: 5px;
+	margin: 8px 0; 
 	border: none;
 	outline: none;
 	background: #1e212d;
@@ -86,3 +113,4 @@ input[type="submit"] {
 .removeContent {
 	display: none;
 }
+
