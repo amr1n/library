@@ -31,7 +31,7 @@ function displayOnScreen() {
 		container.textContent = " ";
 
 		myLibrary.forEach(element => {
-			let	card = document.createElement("div");
+			let card = document.createElement("div");
 			let title = document.createElement("h2");
 			let author = document.createElement("p");
 			let pages = document.createElement("p");
