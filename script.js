@@ -18,9 +18,10 @@ function Book(title, author, pages, readingStats) {
 	this.readingStats = readingStats; 
 }
 
-let grit = new Book("Grit", "Angela Dukworth", "200", "Yes");
-let guilt = new Book("Grit", "Angela Dukworth", "200", "Yes");
-let first = new Book("Grit", "Angela Dukworth", "200", "Yes"); 
+let grit = new Book("Grit", "Angela Dukworth", "200", "Read");
+let leanStartup = new Book("The Lean Startup", "Eric Ries", "336", "Read");
+let fourHr = new Book("The 4-Hour Workweek", "Tim Ferriss", "308", "Not read yet");
+let blueOcean = new Book("Blue Ocean Strategy", "Renée Mauborgne and W. Chan Kim", "240", "Read");
 
 function addBookToLibrary(newBook) {
 	myLibrary.push(newBook); 
@@ -34,28 +35,28 @@ function displayOnScreen() {
 			let title = document.createElement("h2");
 			let author = document.createElement("p");
 			let pages = document.createElement("p");
-			let readingStats = document.createElement("button");
+			let reading = document.createElement("button");
 			let removeBook = document.createElement("button");
 
 			removeBook.classList.add("removeBook");
-			readingStats.classList.add("readingStats");
+			reading.classList.add("readingStats");
 			card.classList.add("card");
 
-			title.textContent = element.title;
-			author.textContent = element.author;
-			pages.textContent = element.pages;
-			readingStats.textContent = element.readingStats;
+			title.textContent = "Title: " + element.title;
+			author.textContent = "Author: " + element.author;
+			pages.textContent = "Pages: " + element.pages;
+			reading.textContent = element.readingStats;
 			removeBook.textContent = "Remove";
 
 			removeBook.dataset.ID = myLibrary.indexOf(element);
-			readingStats.dataset.ID = myLibrary.indexOf(element);
+			reading.dataset.ID = myLibrary.indexOf(element);
 			removeBook.addEventListener("click", remove);
-			readingStats.addEventListener("click", stats);
+			reading.addEventListener("click", stats);
 
 			card.appendChild(title);
 			card.appendChild(author);
 			card.appendChild(pages);
-			card.appendChild(readingStats);
+			card.appendChild(reading);
 			card.appendChild(removeBook);
 			container.appendChild(card);
 
@@ -94,15 +95,23 @@ function remove(element) {
 	displayOnScreen();
 }
 
-function stats() {
-
+function stats(element) {
+	let i = element.target.dataset.ID;
+	if (myLibrary[i].readingStats == "Read") {
+		myLibrary[i].readingStats = "Not read yet";
+		displayOnScreen();
+	}else {
+		myLibrary[i].readingStats = "Read";
+		displayOnScreen();
+	}
 }
 
 addBook.addEventListener("click", addNewBook);
 submitBtn.addEventListener("click", submitInputs);
 
 addBookToLibrary(grit);
-addBookToLibrary(guilt);
-addBookToLibrary(first);
+addBookToLibrary(leanStartup);
+addBookToLibrary(fourHr); 
+addBookToLibrary(blueOcean);
 displayOnScreen();
-
+ 
