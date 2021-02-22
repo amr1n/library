@@ -1,4 +1,3 @@
-
 body {
 	background: #faf3e0;
 	color: #1e212d;
@@ -30,16 +29,14 @@ hr {
 
 .container {
 	display: grid;
-	grid-template-columns: repeat(5, 1fr); 
+	grid-template-columns: repeat(4, 245px);
+	grid-gap: 10px 10px; 
 	padding-top: 2%; 
 	font-size: 20px;
-	width: 90%;
-	margin: 0 auto;
+	justify-content: center; 
 } 
 
 .card {
-	width: 200px;
-	height: 300px;
 	background: #1e212d;
 	color: #ffcc29;
 	padding: 5px;
@@ -58,12 +55,13 @@ hr {
 	color: #faf3e0;
 	border: 2px solid #1e212d;
 	outline: none;
-	font-size: 16px;
+	font-size: 20px;
 }
 
 .btn:hover { 
 	background-color: #faf3e0;
 	color: #1e212d;
+	font-size: 20px;
 }
 
 .btnContainer {
@@ -80,12 +78,12 @@ hr {
 
 .submit {
 	margin: 5% 8%;
-	padding: 15px 45px;
-
+	width: 60%;
+	padding: 10px 0;
 }
 
 .inputForm {
-	width: 25%;
+	width: 20%;
 	margin:100px auto;
 	padding: 20px 0;
 	background: #ffcc29;
@@ -118,7 +116,22 @@ input[type="submit"] {
 	display: none;
 }
 
-/*.removeContent {
+.removeContent {
 	display: none;
-}*/ 
+}
 
+.removeBook, .readingStats{
+	display: block;
+	margin: 15px 0;
+	background-color: inherit;
+	color: inherit;
+	border: none;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.removeBook {
+	color: tomato;
+}
+
+ 
