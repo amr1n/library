@@ -11,11 +11,13 @@ let greet = document.querySelector("h1");
 let [title, author, pages, readingStats] = inputFild;
 let myLibrary = [];
 
-function Book(title, author, pages, readingStats) {
-	this.title = title;
-	this.author = author;
-	this.pages = pages;
-	this.readingStats = readingStats; 
+class Book {
+	constructor(title, author, pages, readingStats) {
+		this.title = title;
+		this.author = author;
+		this.pages = pages;
+		this.readingStats = readingStats;
+	}
 }
 
 let grit = new Book("Grit", "Angela Dukworth", "200", "Read");
