@@ -143,4 +143,31 @@ input[type="submit"] {
 	background: red;
 } 
 
+@media only screen and (max-width: 900px) {
+  .container {
+  	grid-template-columns: repeat(3, 200px);
+  }
 
+  .card {
+  	font-size: 16px;
+  }
+
+  .card h2 {
+  	font-size: 20px;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .container {
+  	grid-template-columns: repeat(2, 200px);
+  }
+
+  .card {
+  	font-size: 16px;
+  }
+
+  .card h2 {
+  	font-size: 20px;
+  }
+}
